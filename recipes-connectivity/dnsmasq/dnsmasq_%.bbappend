@@ -1,7 +1,7 @@
 # Customization of dnsmasq
 
 # Files directory
-FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+FILESEXTRAPATHS_prepend := "${THISDIR}/dnsmasq:"
 
 # Sources
 SRC_URI_append = " \
