@@ -42,6 +42,7 @@ CORE_OS_INSTALL = " \
 IMAGE_INSTALL += " \
 	${CORE_OS_INSTALL} \
 	psplash \
+	rtl8723bs-bt \
 	openssh-sftp-server \
 	packagegroup-distro-base \
 	packagegroup-machine-base \
@@ -51,8 +52,6 @@ IMAGE_INSTALL += " \
 	packagegroup-tools-io \
     	${CORE_IMAGE_EXTRA_INSTALL} \
 "
-
-PACKAGE_EXCLUDE = "packagegroup-base-extended"
 
 # some default locales
 IMAGE_LINGUAS ?= "fr-fr en-us"
