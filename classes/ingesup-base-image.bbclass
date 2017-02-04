@@ -12,6 +12,10 @@ inherit core-image
 # Package gesture
 IMAGE_FEATURES += "package-management"
 
+# To Include splash at boot-up
+IMAGE_FEATURES += "splash"
+
+
 # SSH gesture
 IMAGE_FEATURES += "ssh-server-dropbear"
 
@@ -39,6 +43,10 @@ CORE_OS_INSTALL = " \
         kernel-devicetree \
 "
 
+LOY_SW_INSTALL = " \
+        qledtest \
+"
+
 IMAGE_INSTALL += " \
 	${CORE_OS_INSTALL} \
 	psplash \
@@ -50,8 +58,12 @@ IMAGE_INSTALL += " \
 	${SENSOR_INSTALL} \
 	${HOTSPOT_INSTALL} \
 	packagegroup-tools-io \
-    	${CORE_IMAGE_EXTRA_INSTALL} \
+    ${CORE_IMAGE_EXTRA_INSTALL} \
+    ${LOY_SW_INSTALL} \
 "
+
+# Removed for Qt build 
+#PACKAGE_EXCLUDE = "packagegroup-base-extended"
 
 # some default locales
 IMAGE_LINGUAS ?= "fr-fr en-us"
