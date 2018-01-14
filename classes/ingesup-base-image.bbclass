@@ -44,7 +44,10 @@ CORE_OS_INSTALL = " \
 "
 
 LOY_SW_INSTALL = " \
+        python3-bs4 \
         qledtest \
+        protobuf \
+        callblocker \
 "
 
 IMAGE_INSTALL += " \

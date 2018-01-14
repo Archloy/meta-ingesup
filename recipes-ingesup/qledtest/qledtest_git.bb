@@ -18,6 +18,6 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 S = "${WORKDIR}/git"
 
-DEPENDS = " qtbase"
+DEPENDS = " qtbase python-py"
 
 inherit qmake5

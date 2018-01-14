@@ -1,0 +1,28 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 562c70e3..8a544a81 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -185,12 +185,12 @@ if (${BUILD_GEOCODER} STREQUAL "ON")
+   )
+ 
+   add_custom_command (
+-    COMMAND generate_geocoding_data "${GEOCODING_DIR}"
++    COMMAND tools/generate_geocoding_data "${GEOCODING_DIR}"
+       "${GEOCODING_DATA_OUTPUT}"
+ 
+     OUTPUT ${GEOCODING_DATA_OUTPUT}
+     DEPENDS ${GEOCODING_SOURCES}
+-            generate_geocoding_data
++            tools/generate_geocoding_data
+     COMMENT "Generating geocoding data code"
+   )
+ endif ()
+@@ -462,7 +462,7 @@ if (${BUILD_GEOCODER} STREQUAL "ON")
+   )
+ 
+   add_custom_command (
+-    COMMAND generate_geocoding_data "${GEOCODING_TEST_DIR}"
++    COMMAND tools/generate_geocoding_data "${GEOCODING_TEST_DIR}"
+       "${GEOCODING_TEST_DATA_OUTPUT}" "_test"
+ 
+     OUTPUT ${GEOCODING_TEST_DATA_OUTPUT}
